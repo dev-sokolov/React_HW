@@ -20,6 +20,7 @@ function App() {
       <ShoppingList items={goods}/>
       <ShoppingList items={goodsEmpty}/>
       <OrderStatus info={orderInfo}/>
+      {/* cheng */}
     </>
   );
 }
