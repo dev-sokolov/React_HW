@@ -19,8 +19,7 @@ function App() {
       <Greeting name="Егор"/>
       <ShoppingList items={goods}/>
       <ShoppingList items={goodsEmpty}/>
-      <OrderStatus info={orderInfo}/>
-      {/* cheng */}
+      <OrderStatus info={orderInfo}/>     
     </>
   );
 }
