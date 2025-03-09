@@ -6,15 +6,16 @@ import style from './CityCard.module.css'
 const CityCard = ({city}) => {
 
     const NewCity = citiesData.find(elem => elem.name === city);
-    const checkCity = NewCity ? NewCity : "Город не найден";
+    if(!NewCity) {
+        return <p>Город не найден</p> 
+    }
     
-    const facts = checkCity.facts.map((elem, index) => <li key={index}>{elem}</li> )
+    const facts = NewCity.facts.map((elem, index) => <li key={index}>{elem}</li> )
         return (
-            <div>
-               <h2>{checkCity.name}</h2> 
-               <p>{checkCity.description}</p>
-               <div className={style.img}><img src={checkCity.imageUrl} alt={checkCity.name} /></div>
-               <p>Интересные факты о городе:</p>
+            <div className={style.card}>
+               <h2>{NewCity.name}</h2>       
+               <div className={style.img}><img src={NewCity.imageUrl} alt={NewCity.name} /></div>
+               <p>{NewCity.description}</p>
                <ul>{facts}</ul>           
             </div>
         )

@@ -1,0 +1,25 @@
+.quiz {
+    background-color: rgba(131, 198, 227, 0.687);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+    border: 1px solid rgb(157, 130, 238);
+    border-radius: 10px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.title, .data {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+

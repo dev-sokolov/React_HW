@@ -1,22 +1,25 @@
 import CityCard from './CityCard/CityCard';
 import citiesData from './citiesData';
-import './CitySelector.css'
+import './CitySelector.module.css'
+import style from './CitySelector.module.css'
 
-const CitySelector = ({handleCity, city}) => {
+const CitySelector = ({ handleCity, city }) => {
     const elements = citiesData.map((elem) => {
         return <option key={elem.name} name={elem.name} value={elem.name}>{elem.name}</option>
     })
 
     return (
-        <>
-            <div>                
-                <label htmlFor="city">Выберите город</label>
-                <select onChange={handleCity} name="city" id="city">
-                    {elements}
-                </select>
+        <div className={style.wrap}>
+            <div className={style.wrapCity}>
+                <label className={style.title} htmlFor="city">Выберите город:</label>
+                <div>
+                    <select onChange={handleCity} name="city" id="city">
+                        {elements}
+                    </select>
+                </div>
             </div>
-            <div className='card'><CityCard city={city}/></div>        
-        </>
+            <div><CityCard city={city} /></div>
+        </div>
     )
 };
 
