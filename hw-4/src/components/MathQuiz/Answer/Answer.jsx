@@ -3,21 +3,22 @@ import style from './Answer.module.css';
 
 const Answer = ({updatePoints}) => {
 
-    const [answer, setAnswer] = useState(null);
+    const [answer, setAnswer] = useState('');
 
     const handleAnswer = (event) => { 
-        setAnswer(event.target.value) 
+        setAnswer(event.target.value);
     }
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        updatePoints(answer)
+        updatePoints(answer);
+        setAnswer('');    
     }
 
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <input onChange={handleAnswer} name="answer_input" type="number" placeholder='Введите ответ'/>
+                <input onChange={handleAnswer} value={answer} name="answer_input" type="number" placeholder='Введите ответ'/>
                 <button type='submit'>Проверить</button>
             </form>
         </div>    

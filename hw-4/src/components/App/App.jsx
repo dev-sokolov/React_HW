@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import CitySelector from '../CitySelector/CitySelector';
 import MathQuiz from '../MathQuiz/MathQuiz';
+import CityCard from '../CityCard/CityCard';
 import '../../styles/reset.css'
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
 
   return (
     <>
-      <CitySelector handleCity={handleCity} city={selectedCity} />
+      <CitySelector handleCity={handleCity} />      
+      <CityCard city={selectedCity} />
       <MathQuiz />
     </>
   )

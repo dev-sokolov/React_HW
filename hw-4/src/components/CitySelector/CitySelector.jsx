@@ -1,9 +1,8 @@
-import CityCard from './CityCard/CityCard';
 import citiesData from './citiesData';
 import './CitySelector.module.css'
 import style from './CitySelector.module.css'
 
-const CitySelector = ({ handleCity, city }) => {
+const CitySelector = ({ handleCity}) => {
     const elements = citiesData.map((elem) => {
         return <option key={elem.name} name={elem.name} value={elem.name}>{elem.name}</option>
     })
@@ -18,7 +17,6 @@ const CitySelector = ({ handleCity, city }) => {
                     </select>
                 </div>
             </div>
-            <div><CityCard city={city} /></div>
         </div>
     )
 };
