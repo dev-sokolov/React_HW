@@ -1,0 +1,67 @@
+
+.wrap {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+}
+
+.userCard {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px;
+    background-color: rgb(167, 206, 167);
+    width: 600px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;     
+    box-shadow: 0 0 0 18px rgba(190, 221, 190, 0.467);
+}
+
+.img {
+    padding-top: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.img img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+h2 {
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mail {
+    font-size: 25px;
+}
+
+.phone {
+    font-size: 25px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: rgb(247, 123, 123);
+    color: #fff;
+}
+
+.error {
+    color: red;
+    padding: 30px;
+    text-align: center;
+    font-size: 25px;
+}
