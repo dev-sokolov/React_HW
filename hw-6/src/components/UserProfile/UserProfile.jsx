@@ -5,7 +5,7 @@ import style from './UserProfile.module.css'
 
 const UserProfile = () => {
     const [user, setUser] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null)
     const [switcher, setSwitcher] = useState(true);
 
