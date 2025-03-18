@@ -10,7 +10,6 @@ function App() {
       <LanguageProvider>
         <General />
       </LanguageProvider>
-
     </>
   )
 }

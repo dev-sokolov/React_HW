@@ -1,5 +1,7 @@
-import Description from './Description/Description';
-import Batton from './Batton/Batton';
+// import Description from './Description/Description';
+import Description from '../Description/Description';
+// import Batton from './Batton/Batton';
+import Batton from '../Batton/Batton';
 
 import style from './General.module.css';
 
