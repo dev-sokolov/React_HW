@@ -1,0 +1,7 @@
+.wrap {
+    padding: 100px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
