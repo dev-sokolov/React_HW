@@ -1,0 +1,33 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 30%;
+    position: absolute;
+    bottom: 100px;
+    right: 50px;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.text {
+    font-size: 20px;
+}
+
+button {
+    display: inline;
+    background-color: rgb(30, 144, 237);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 20%;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: rgb(51, 30, 237);
+}

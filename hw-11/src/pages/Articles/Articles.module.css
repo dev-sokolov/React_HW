@@ -1,0 +1,11 @@
+.text {
+    font-size: 30px;
+    text-decoration: none;
+    color: #000;
+    padding: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+

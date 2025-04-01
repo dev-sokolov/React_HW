@@ -1,0 +1,15 @@
+.menu {
+    padding: 40px;
+    font-size: 35px;
+}
+
+.li {
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s;
+}
+
+.li:hover {
+    border-bottom: 2px solid red;
+    color: red;
+}
