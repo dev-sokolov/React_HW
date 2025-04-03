@@ -21,7 +21,6 @@ const DynamicForm = () => {
                 {checkFirstFild.length >= 5 && (
                     <div>
                         <label htmlFor="text2">Second Field</label>
-                        {/* <input type="text" /> */}
                         <input {...register("text2", { required: true, minLength: { value: 5, message: "Количество символов должно быть больше 5" } })} type="text2" name='text2' id='text2' />
                         {errors.text2 && <p style={{ color: "red" }}>{errors.text2.message}</p>}
                     </div>
