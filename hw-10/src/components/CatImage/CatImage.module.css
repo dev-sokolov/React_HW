@@ -1,0 +1,41 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.box img{
+    border-radius: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+ h2 {
+    font-size: 25px;
+    margin: auto;
+ }
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-size: 15px;
+    padding: 10px;
+    color: #fff;
+    background-color: rgb(49, 101, 243);
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: rgb(4, 42, 145);
+}
