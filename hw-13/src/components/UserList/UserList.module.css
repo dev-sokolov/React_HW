@@ -1,0 +1,17 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 60%;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+}

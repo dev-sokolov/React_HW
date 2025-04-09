@@ -1,0 +1,11 @@
+.users {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.items {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    font-size: 20px;
+    color: #888;
+}
