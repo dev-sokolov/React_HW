@@ -1,4 +1,5 @@
 import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
@@ -25,7 +26,7 @@ const MainContainer = () => {
         <>
             <Container maxWidth="md"  >
                 <Box sx={{ bgcolor: '#fff', height: '100vh' }}>
-                    <h2>Добро пожаловать в наше приложение!</h2>
+                    <Typography variant="h5" style={{marginTop: "15px", marginBottom: "15px"}}>Добро пожаловать в наше приложение!</Typography>
                     <Button variant="contained" size="small" style={{ padding: "7px" }} onClick={handleClickOpen}>
                         Открыть диалоговое окно
                     </Button>
