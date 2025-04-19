@@ -26,8 +26,8 @@ const MainContainer = () => {
         <>
             <Container maxWidth="md"  >
                 <Box sx={{ bgcolor: '#fff', height: '100vh' }}>
-                    <Typography variant="h5" style={{marginTop: "15px", marginBottom: "15px"}}>Добро пожаловать в наше приложение!</Typography>
-                    <Button variant="contained" size="small" style={{ padding: "7px" }} onClick={handleClickOpen}>
+                    <Typography variant="h5" sx={{ marginTop: "15px", marginBottom: "15px" }}>Добро пожаловать в наше приложение!</Typography>
+                    <Button variant="contained" size="small" sx={{ padding: "7px" }} onClick={handleClickOpen}>
                         Открыть диалоговое окно
                     </Button>
 
@@ -35,7 +35,7 @@ const MainContainer = () => {
                         open={open}
                         onClose={handleClose}
                         aria-labelledby="alert-dialog-title"
-                        aria-describedby="alert-dialog-description"                        
+                        aria-describedby="alert-dialog-description"
                     >
                         <DialogTitle id="alert-dialog-title">
                             {"Использовать Material UI?"}
@@ -47,8 +47,8 @@ const MainContainer = () => {
                         </DialogContent>
                         <DialogActions>
                             <Button onClick={handleClose}>Отмена</Button>
-                            <Button onClick={handleClose} autoFocus>
-                                Согласен
+                            <Button onClick={handleClose}>
+                                Согласен 
                             </Button>
                         </DialogActions>
                     </Dialog>
