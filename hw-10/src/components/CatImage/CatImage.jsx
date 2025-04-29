@@ -1,5 +1,5 @@
 import { getCats } from '../../api/cats';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 
 import styles from './CatImage.module.css';
 
@@ -8,28 +8,29 @@ const CatImage = () => {
     const [cats, setCats] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [flag, setFlag] = useState(true)
+    const [flag, setFlag] = useState(true);
 
-    useEffect(() => {
-        const getCatsList = async () => {
-            try {
-                setLoading(true);
-                const data = await getCats();
-                setCats(data);
-            }
-            catch (error) {
-                setError(error.message)
-            }
-            finally {
-                setLoading(false)
-            }
+    const getCatsList = useCallback(async () => {
+        try {
+            setLoading(true);
+            const data = await getCats();
+            setCats(data);
         }
+        catch (error) {
+            setError(error.message)
+        }
+        finally {
+            setLoading(false)
+        }
+    }, []) 
+
+    useEffect(() => {       
         getCatsList()
     }, [flag])
 
-    const reload = () => {
-        setFlag(prevFlag => !prevFlag)
-    }
+    const reload = useCallback(() => {
+            setFlag(prevFlag => !prevFlag)
+        }, []) 
 
     const elements = cats.map(item => <div className={styles.box} key={item.id}><img style={{ width: "300px", height: "300px" }} src={item.url} alt="cat" /></div>)
 
