@@ -16,12 +16,12 @@ const DynamicForm = () => {
         <div className={style.wrap}>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <label htmlFor="text">First Field</label>
-                <input {...register("text", { required: true, minLength: { value: 5, message: "Количество символов должно быть больше 5" } })} type="text" name='text' id='text' />
+                <input {...register("text", { required: "Поле должно быть заполнено", minLength: { value: 5, message: "Количество символов должно быть больше 5" } })} type="text" name='text' id='text' />
                 {errors.text && <p style={{ color: "red" }}>{errors.text.message}</p>}
                 {checkFirstFild.length >= 5 && (
-                    <div>
+                    <div>                        
                         <label htmlFor="text2">Second Field</label>
-                        <input {...register("text2", { required: true, minLength: { value: 5, message: "Количество символов должно быть больше 5" } })} type="text2" name='text2' id='text2' />
+                        <input {...register("text2", { required: "Поле должно быть заполнено", minLength: { value: 5, message: "Количество символов должно быть больше 5" } })} type="text" name='text2' id='text2' />
                         {errors.text2 && <p style={{ color: "red" }}>{errors.text2.message}</p>}
                     </div>
                   )}
