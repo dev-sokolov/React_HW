@@ -1,7 +1,7 @@
 
-import User from '../User/User'
+import User from '../User/User';
 
-import './App.css'
+import './App.css';
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
   )
 }
 
-export default App
+export default App;
 
 
 

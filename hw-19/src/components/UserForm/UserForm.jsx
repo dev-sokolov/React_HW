@@ -2,8 +2,9 @@ import '@ant-design/v5-patch-for-react-19';
 
 import { Button, Form, Input } from 'antd';
 
-const UserForm = ({ onFinish, onFinishFailed }) => {
+const UserForm = ({ onFinish }) => {
     const [form] = Form.useForm();
+
     const handleFinish = (values) => {
         onFinish(values);
         form.resetFields();
@@ -17,7 +18,6 @@ const UserForm = ({ onFinish, onFinishFailed }) => {
             wrapperCol={{ span: 16 }}
             style={{ width: 800 }}
             onFinish={handleFinish}
-            onFinishFailed={onFinishFailed}
             autoComplete="off"
         >
 
