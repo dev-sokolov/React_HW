@@ -8,7 +8,6 @@ const CatImage = () => {
     const [cats, setCats] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [flag, setFlag] = useState(true);
 
     const getCatsList = useCallback(async () => {
         try {
@@ -22,15 +21,11 @@ const CatImage = () => {
         finally {
             setLoading(false)
         }
-    }, []) 
+    }, [])
 
-    useEffect(() => {       
+    useEffect(() => {
         getCatsList()
-    }, [flag])
-
-    const reload = useCallback(() => {
-            setFlag(prevFlag => !prevFlag)
-        }, []) 
+    }, [getCatsList])
 
     const elements = cats.map(item => <div className={styles.box} key={item.id}><img style={{ width: "300px", height: "300px" }} src={item.url} alt="cat" /></div>)
 
@@ -39,7 +34,7 @@ const CatImage = () => {
             <div className={styles.content}>
                 <h2>Random Cat Image</h2>
                 {elements}
-                <div className={styles.btn}><button onClick={reload} type='submit'>Load New Image</button></div>
+                <div className={styles.btn}><button onClick={getCatsList} type='submit'>Load New Image</button></div>
                 {loading && <p>Loading...</p>}
                 {error && <p>Error: {error}</p>}
             </div>
