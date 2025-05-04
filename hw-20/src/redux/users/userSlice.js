@@ -5,9 +5,9 @@ import userList from "../../data/userList";
 const userSlice = createSlice({
     name: "users",
     initialState: userList,
-    // reducers: {
+    reducers: {
 
-    // }
+    }
 })
 
 export default userSlice.reducer;
