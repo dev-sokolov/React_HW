@@ -1,5 +1,5 @@
 
-const UserList = ({ userList }) => {
+const UserList = ({ userList = [] }) => {
 
     const elements = userList.map(({ name, id }) => <li key={id}>{name}</li>)
 
