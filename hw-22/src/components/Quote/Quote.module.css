@@ -1,0 +1,30 @@
+.wrapper {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.error {
+    color: red;
+}
+
+button {
+    background-color: rgb(0, 145, 255);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(0, 110, 255);
+}
+
+.author {
+    text-align: right;
+}
+
+p {
+    font-size: 25px;
+}

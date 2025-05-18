@@ -1,0 +1,1 @@
+export const selectCurrentQuote = (store) => store.quotes; 
